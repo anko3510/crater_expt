@@ -7,5 +7,5 @@
 !/src/gnuplot/plot.gpl
 
 /src/python3/*
-!/src/data_input.py
-!/src/newest_to_old.py
+!/src/python3/data_input.py
+!/src/python3/newest_to_old.py

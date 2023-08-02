@@ -2,6 +2,7 @@
 !/src/main.sh
 !/src/gnuplot/
 !/src/python3/
+!/src/tex/
 
 /src/gnuplot/*
 !/src/gnuplot/plot.gpl
@@ -9,3 +10,12 @@
 /src/python3/*
 !/src/python3/data_input.py
 !/src/python3/newest_to_old.py
+!/src/python3/crater_shot.py
+
+/src/tex/*
+!/src/tex/main.tex
+!/src/tex/preamble.tex
+!/src/tex/figures/
+
+/src/tex/figures/*
+!/src/tex/figures/memo_figures.txt

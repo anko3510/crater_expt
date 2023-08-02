@@ -19,3 +19,12 @@
 
 /src/tex/figures/*
 !/src/tex/figures/memo_figures.txt
+
+/explanation/*
+!/explanation/explanation.tex
+!/explanation/preamble.tex
+!/explanation/figure/
+
+/explanation/figure/*
+!/explanation/figure/explanation_figure.pdf
+!/explanation/figure/explanation_figure.pptx

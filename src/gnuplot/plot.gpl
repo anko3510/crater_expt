@@ -1,0 +1,21 @@
+reset
+
+set terminal pdfcairo size 12cm,9cm enhanced
+set output "graph.pdf"
+
+set xlabel "Height [cm]"
+set ylabel "Dimeter{^4} [mm{^4}]"
+
+set xrange [0:200]
+set yrange [0:1e8]
+
+set grid
+
+set key right bottom
+
+plot "old10.dat" using 1:($2**4) pt 1 ps 1 lw 1 lc rgb "royalblue" notitle,\
+    "newest.dat" using 1:($2**4) pt 2 ps 1 lw 2 lc rgb "dark-pink" title "Your data",\
+
+set terminal pop
+exit
+

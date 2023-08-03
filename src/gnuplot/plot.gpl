@@ -14,7 +14,7 @@ set grid
 set key right bottom
 
 # 各辺の長さがa,b,cの三角形の外接円の直径を求める関数
-Diam(a,b,c)=4.0*a*b*c/sqrt(2.0*(a*a*b*b+b*b*c*c+c*c*a*a)-a*a*a*a-b*b*b*b-c*c*c*c)
+Diam(a,b,c)=(2.0*a*b*c)/sqrt(2.0*(a*a*b*b+b*b*c*c+c*c*a*a)-a*a*a*a-b*b*b*b-c*c*c*c)
 
 plot "old10.dat" using 1:(Diam($2,$3,$4)**4) pt 1 ps 1 lw 1 lc rgb "royalblue" notitle,\
     "newest.dat" using 1:(Diam($2,$3,$4)**4) pt 2 ps 1 lw 2 lc rgb "dark-pink" title "Your data",\

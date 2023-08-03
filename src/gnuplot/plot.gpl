@@ -7,11 +7,11 @@ set xlabel "Height [cm]"
 set ylabel "Diameter{^4} [cm{^4}]"
 
 set xrange [0:200]
-set yrange [0:1300]
+set yrange [0:300]
 
 set grid
 
-set key right bottom
+# set key right bottom
 
 # 各辺の長さがa,b,cの三角形の外接円の直径を求める関数
 Diam(a,b,c)=(2.0*a*b*c)/sqrt(2.0*(a*a*b*b+b*b*c*c+c*c*a*a)-a*a*a*a-b*b*b*b-c*c*c*c)

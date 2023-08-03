@@ -6,6 +6,12 @@
 wsl --install -d Debian
 ```
 
+### パッケージの更新
+```bash
+sudo apt update
+sudo apt upgrade
+```
+
 ### 必要なパッケージのインストール
 ```bash
 sudo apt install gnuplot gnuplot-x11

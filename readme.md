@@ -14,7 +14,7 @@ sudo apt install git
 ```
 
 ## 本スクリプトのインストール
-デスクトップでWindows Terminalを起動し以下のコマンドを入力.
+デスクトップで右クリック> ターミナルで開く を選び, 以下のコマンドを入力.
 ```PowerShell
 wsl -d debian
 ```
@@ -23,7 +23,7 @@ git clone https://github.com/anko3510/crater_expt.git
 ```
 
 ## 本スクリプトの実行
-デスクトップでWindows Terminalを起動し以下のコマンドを入力.
+デスクトップで右クリック> ターミナルで開く を選び, 以下のコマンドを入力.
 ```PowerShell
 wsl -d debian
 ```

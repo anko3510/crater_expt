@@ -49,6 +49,16 @@ while True:
     if check == "y":
         break
 
+D = (4.0*chord1*chord2*chord3)/(2.0*(chord1*chord1*chord2*chord2+chord2*chord2*chord3*chord3+chord3*chord3*chord1*chord1)-chord1*chord1*chord1*chord1-chord2*chord2*chord2*chord2-chord3*chord3*chord3*chord3)**0.5
+print(f"直径{D}(cm)です. 直径の4乗は{D**4}です.")
+print("合っていますか? (y/n)")
+while True:
+    check = str(input())
+    if check == "y":
+        break
+    print("不正な入力です. この入力値で正しいですか? (y/n)")
+
+
 ##データ出力
 newest = open("../gnuplot/newest.dat", "w", encoding="utf-8")
 newest.write(str(height))

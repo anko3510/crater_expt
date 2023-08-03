@@ -50,7 +50,7 @@ while True:
         break
 
 D = (4.0*chord1*chord2*chord3)/(2.0*(chord1*chord1*chord2*chord2+chord2*chord2*chord3*chord3+chord3*chord3*chord1*chord1)-chord1*chord1*chord1*chord1-chord2*chord2*chord2*chord2-chord3*chord3*chord3*chord3)**0.5
-print(f"直径{D}(cm)です. 直径の4乗は{D**4}です.")
+print(f"直径{D}(cm)です. 直径の4乗は{D**4}(cm^4)です.")
 print("合っていますか? (y/n)")
 while True:
     check = str(input())

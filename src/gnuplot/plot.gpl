@@ -1,27 +1,36 @@
 reset
-
-set terminal pdfcairo size 12cm,9cm enhanced
+set terminal pdfcairo size 12cm,9cm
 set output "graph.pdf"
 
-set xlabel "Height [cm]"
-set ylabel "Diameter{^4} [cm{^4}]"
+set xtics nomirror
+set x2tics nomirror ("10" 10, "" 20, "" 30, "" 40, "" 50, "" 60, "" 70, "" 80, "" 90, "100" 100,\
+"" 110, "" 120, "" 130, "" 140, "" 150, "" 160, "" 170, "" 180, "" 190)
+set mytics
 
-set xrange [0:200]
-set yrange [0:400]
+g=9.8
+m=6.0244e-3
 
-set grid
+set xrange [0.1*m*g:2.0*m*g]
+set x2range [10:200]
+set autoscale y
+
+set log xy
+set log x2
+
+set grid x2tics
+set grid ytics
+set grid mytics
+
+set xlabel "Impact energy [J]"
+set x2label "Height [cm]"
+set ylabel "Radius{^4} [cm{^4}]"
 
 set key left top
 
-# 各辺の長さがa,b,cの三角形の外接円の直径を求める関数
-Diam(a,b,c)=(2.0*a*b*c)/sqrt(2.0*(a*a*b*b+b*b*c*c+c*c*a*a)-a*a*a*a-b*b*b*b-c*c*c*c)
+Diam(a,b,c)=2.0*a*b*c/sqrt(2.0*a**2.0*b**2+2.0*b**2*c**2+2*c**2*a**2-a**4-b**4-c**4)
 
-#plot "old10.dat" using 1:(Diam($2,$3,$4)**4) pt 1 ps 1 lw 1 lc rgb "royalblue" notitle,\
-#    "newest.dat" using 1:(Diam($2,$3,$4)**4) pt 2 ps 1 lw 2 lc rgb "dark-pink" title "Your data",\
-
-plot "old.dat" using 1:(Diam($2,$3,$4)**4) pt 1 ps 1 lw 1 lc rgb "royalblue" notitle,\
-  "newest.dat" using 1:(Diam($2,$3,$4)**4) pt 2 ps 1 lw 2 lc rgb "dark-pink" title "Your data",\
+plot "old.dat" using 1:(Diam($2,$3,$4)**4/16.0) axis x2y1 with points pointtype 1 pointsize 1 linewidth 1 linetype 1 linecolor rgb "royalblue" notitle,\
+     "newest.dat" using 1:(Diam($2,$3,$4)**4/16.0) axis x2y1 with points pointtype 2 pointsize 1 linewidth 2 linetype 1 linecolor rgb "dark-pink" title "Your data"
 
 set terminal pop
 exit
-

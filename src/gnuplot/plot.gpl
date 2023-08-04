@@ -7,7 +7,7 @@ set xlabel "Height [cm]"
 set ylabel "Diameter{^4} [cm{^4}]"
 
 set xrange [0:200]
-set yrange [0:300]
+set yrange [0:400]
 
 set grid
 

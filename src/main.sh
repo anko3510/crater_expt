@@ -48,3 +48,7 @@ lualatex main
 lualatex main
 cp main.pdf ../output.pdf
 cd "$HD"
+
+#均す
+echo "衝突体を回収し, 砂を均してください."
+echo "./pdf_to_qr.shを実行してください."

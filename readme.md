@@ -7,7 +7,7 @@ wsl --install -d Debian
 ```
 
 ### パッケージの更新
-```bash
+```shell
 sudo apt update
 sudo apt upgrade
 ```

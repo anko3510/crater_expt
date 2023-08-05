@@ -2,7 +2,7 @@
 このスクリプトはWindows11で動作を確認しています.
 ## 環境構築
 ### WSL (Debian) のインストール
-```PowerShell
+```powershell
 wsl --install -d Debian
 ```
 

@@ -12,7 +12,7 @@ m=6.0244e-3
 
 set xrange [0.1*m*g:2.0*m*g]
 set x2range [10:200]
-set autoscale y
+set yrange [1:100]
 
 set log xy
 set log x2
@@ -29,8 +29,11 @@ set key left top
 
 Diam(a,b,c)=2.0*a*b*c/sqrt(2.0*a**2.0*b**2+2.0*b**2*c**2+2*c**2*a**2-a**4-b**4-c**4)
 
-plot "old.dat" using 1:(Diam($2,$3,$4)**4/16.0) axis x2y1 with points pointtype 1 pointsize 1 linewidth 1 linetype 1 linecolor rgb "royalblue" notitle,\
-     "newest.dat" using 1:(Diam($2,$3,$4)**4/16.0) axis x2y1 with points pointtype 2 pointsize 1 linewidth 2 linetype 1 linecolor rgb "dark-pink" title "Your data"
+plot "newest.dat" using 1:(Diam($2,$3,$4)**4/16.0) axis x2y1 with points pointtype 2 pointsize 1 linewidth 2 linetype 1 linecolor rgb "dark-pink" title "Your data",\
+     "old.dat" using 1:(Diam($2,$3,$4)**4/16.0) axis x2y1 with points pointtype 1 pointsize 1 linewidth 1 linetype 1 linecolor rgb "royalblue" notitle,\
+     x axis x2y1 with lines dashtype (5,5) linecolor rgb "gray"title "r^4=       h",\
+     0.1*x axis x2y1 with lines dashtype (10,10) linecolor rgb "gray"title "r^4=0.1  h",\
+     0.01*x axis x2y1 with lines dashtype (30,10,5,10) linecolor rgb "gray"title "r^4=0.01h"\
 
 set terminal pop
 exit

@@ -21,9 +21,9 @@ set grid x2tics
 set grid ytics
 set grid mytics
 
-set xlabel "Impact energy [J]"
-set x2label "Height [cm]"
-set ylabel "Radius{^4} [cm{^4}]"
+set xlabel "Impact energy [ J ]"
+set x2label "Height [ cm ]"
+set ylabel "Radius{^4} [ cm{^4} ]"
 
 set key left top
 

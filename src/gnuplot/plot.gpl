@@ -10,8 +10,8 @@ set mytics
 g=9.8
 m=13.8e-3 #鉄球の重さ
 
-set xrange [0.1*m*g:2.0*m*g]
-set x2range [10:200]
+set xrange [0.099*m*g:2.0*m*g]
+set x2range [9.9:200]
 set yrange [1:100]
 
 set log xy

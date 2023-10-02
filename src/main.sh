@@ -45,7 +45,7 @@ cd "$HD"
 cd ./tex
 lualatex main
 lualatex main
-lualatex main
+#lualatex main
 cp main.pdf ../output.pdf
 cd "$HD"
 

@@ -21,7 +21,7 @@ set grid x2tics
 set grid ytics
 set grid mytics
 
-set xlabel "小←  →大\n\nぶつかったときのエネルギー [ J ]"
+set xlabel "小←  →大\n\nぶつかったときのエネルギー E [ J ]"
 set x2label "高さ h [ cm ]\n\n低←  →高"
 set ylabel "半径×半径×半径×半径 r^4 [ cm^4 ]\n\n小←  →大"
 

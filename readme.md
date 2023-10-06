@@ -18,6 +18,7 @@ sudo apt upgrade
 ### 必要なパッケージのインストール
 ```bash
 sudo apt install gnuplot gnuplot-x11
+sudo apt install inkscape
 sudo apt install texlive*
 sudo apt install git
 ```

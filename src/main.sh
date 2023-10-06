@@ -33,6 +33,7 @@ shuf old.dat | head -10 > old10.dat
 
 #gnuplotでgraph.pdfを生成, tex/figures/graph.pdfにコピー
 gnuplot plot.gpl
+inkscape --export-filename=graph.pdf graph.svg
 cp -f graph.pdf ../tex/figures/graph.pdf
 cd "$HD"
 

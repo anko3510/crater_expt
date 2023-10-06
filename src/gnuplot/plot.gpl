@@ -1,6 +1,7 @@
 reset
-set terminal pdfcairo size 12cm,9cm
-set output "graph.pdf"
+set terminal svg
+set size ratio 0.7071
+set output "graph.svg"
 
 set xtics nomirror
 set x2tics nomirror ("10" 10, "" 20, "" 30, "" 40, "" 50, "" 60, "" 70, "" 80, "" 90, "100" 100,\
@@ -21,9 +22,9 @@ set grid x2tics
 set grid ytics
 set grid mytics
 
-set xlabel "小←  →大\n\nぶつかったときのエネルギー E [ J ]"
-set x2label "高さ h [ cm ]\n\n低←  →高"
-set ylabel "半径×半径×半径×半径 r^4 [ cm^4 ]\n\n小←  →大"
+set xlabel "ぶつかったときのエネルギー E [ J ] (小←→大)"
+set x2label "高さ h [ cm ] (低←→高)"
+set ylabel "半径×半径×半径×半径 r^4 [ cm^4 ] (小←→大)"
 
 set key left top
 

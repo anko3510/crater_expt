@@ -45,7 +45,7 @@ cd "$HD"
 #texで印刷するPDFを作成
 cd ./tex
 lualatex main > /dev/null
-lualatex main > /dev/null
+#lualatex main > /dev/null
 #lualatex main
 cp main.pdf ../output.pdf
 cd "$HD"

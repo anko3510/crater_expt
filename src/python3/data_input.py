@@ -51,7 +51,7 @@ while True:
 
 
 ##データ出力
-newest = open("../gnuplot/newest.dat", "w", encoding="utf-8")
+newest = open("../gnuplot/newest.dat", "a", encoding="utf-8")
 newest.write(str(chord1))
 newest.write(" ")
 newest.write(str(chord2))

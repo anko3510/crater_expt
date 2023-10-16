@@ -1,0 +1,40 @@
+reset
+set terminal svg
+set size ratio 0.7071
+set output "graph.svg"
+
+set xtics nomirror
+set x2tics nomirror ("10" 10, "" 20, "" 30, "" 40, "" 50, "" 60, "" 70, "" 80, "" 90, "100" 100,\
+"" 110, "" 120, "" 130, "" 140, "" 150, "" 160, "" 170, "" 180, "" 190)
+set mytics
+
+g=9.8
+m=13.8e-3 #鉄球の重さ
+
+set xrange [0.099*m*g:2.0*m*g]
+set x2range [9.9:200]
+set yrange [1:100]
+
+set log xy
+set log x2
+
+set grid x2tics
+set grid ytics
+set grid mytics
+
+set xlabel "ぶつかったときのエネルギー E [ J ] (小←→大)"
+set x2label "高さ h [ cm ] (低←→高)"
+set ylabel "半径×半径×半径×半径 r^4 [ cm^4 ] (小←→大)"
+
+set key left top
+
+Diam(a,b,c)=2.0*a*b*c/sqrt(2.0*a**2.0*b**2+2.0*b**2*c**2+2*c**2*a**2-a**4-b**4-c**4)
+
+plot "newest.dat" using 1:(Diam($2,$3,$4)**4/16.0) axis x2y1 with points pointtype 2 pointsize 1 linewidth 2 linetype 1 linecolor rgb "dark-pink" title "あなたの記録",\
+     "old.dat" using 1:(Diam($2,$3,$4)**4/16.0) axis x2y1 with points pointtype 1 pointsize 1 linewidth 1 linetype 1 linecolor rgb "royalblue" notitle,\
+     x axis x2y1 with lines dashtype (5,5) linecolor rgb "gray"title "r^4=       h",\
+     0.1*x axis x2y1 with lines dashtype (10,10) linecolor rgb "gray"title "r^4=0.1  h",\
+     0.01*x axis x2y1 with lines dashtype (30,10,5,10) linecolor rgb "gray"title "r^4=0.01h"\
+
+set terminal pop
+exit

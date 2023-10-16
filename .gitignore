@@ -11,6 +11,7 @@
 !/src/python3/data_input.py
 !/src/python3/newest_to_old.py
 !/src/python3/crater_shot.py
+!/src/python3/height_input.py
 
 /src/tex/*
 !/src/tex/main.tex

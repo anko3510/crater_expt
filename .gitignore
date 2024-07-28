@@ -29,3 +29,9 @@
 /explanation/figure/*
 !/explanation/figure/explanation_figure.pdf
 !/explanation/figure/explanation_figure.pptx
+
+/latest/*
+!/latest/data_input.py
+!/latest/data_plot.py
+!/latest/main.sh
+!/latest/graph_white.pdf

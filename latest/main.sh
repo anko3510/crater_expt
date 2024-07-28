@@ -23,5 +23,6 @@ cd ./pandoc
 echo "html 作成中…"
 pandoc -s index.md -o index.html -d default.yaml --metadata-file=metadata.yaml
 cd "$HD"
-echo "結果の html"
+echo
+echo "生成した html"
 echo "$HD""pandoc/index.html"

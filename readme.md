@@ -47,6 +47,7 @@ git clone https://github.com/anko3510/crater_expt.git
 wsl -d debian
 ```
 ```bash
+conda activate
 cd ./crater_expt/latest
 chmod +x ./main.sh
 ./main.sh

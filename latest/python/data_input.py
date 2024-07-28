@@ -5,7 +5,7 @@ while True:
     print("衝突体の高さ(cm)を半角数字で入力してEnterを押してください.")
     while True:
         try:
-            height = float(input())  # 高さを入力
+            height = float(input(">>>"))  # 高さを入力
         except ValueError:
             print("不正な入力値です. 数字を入力してください.")
         else:
@@ -14,7 +14,7 @@ while True:
     print(f"衝突体の高さは {height:5.1f} cm です.")
     print("この入力値で正しいですか? (y/n)")
     while True:
-        check = input().strip().lower()
+        check = input(">>>").strip().lower()
         if check in ("y", "n"):
             break
         print("不正な入力です. yまたはnで答えてください.")
@@ -24,10 +24,18 @@ while True:
 
 print()
 print("衝突体を落としてクレーターを作成してください．")
+print("作成しましたか？(y)")
+while True:
+    check = input(">>>").strip().lower()
+    if check == "y":
+        break
+    print("不正な入力です. yで答えてください.")
+
+print()
 print("クレーターの画像を撮影してください.")
 print("撮影しましたか? (y)")
 while True:
-    check = input().strip().lower()
+    check = input(">>>").strip().lower()
     if check == "y":
         break
     print("不正な入力です. yで答えてください.")
@@ -38,30 +46,33 @@ while True:
     print("1つ目の弦の長さ(cm)を半角数字で入力してEnterを押してください.")
     while True:
         try:
-            chord1 = float(input())  # 1つ目の弦の長さを入力
+            chord1 = float(input(">>>"))  # 1つ目の弦の長さを入力
         except ValueError:
             print("不正な入力値です. 数字を入力してください.")
         else:
             break
 
+    print()
     print("2つ目の弦の長さ(cm)を半角数字で入力してEnterを押してください.")
     while True:
         try:
-            chord2 = float(input())  # 2つ目の弦の長さを入力
+            chord2 = float(input(">>>"))  # 2つ目の弦の長さを入力
         except ValueError:
             print("不正な入力値です. 数字を入力してください.")
         else:
             break
 
+    print()
     print("3つ目の弦の長さ(cm)を半角数字で入力してEnterを押してください.")
     while True:
         try:
-            chord3 = float(input())  # 3つ目の弦の長さを入力
+            chord3 = float(input(">>>"))  # 3つ目の弦の長さを入力
         except ValueError:
             print("不正な入力値です. 数字を入力してください.")
         else:
             break
 
+    print()
     print(f"弦の長さは {chord1:5.2f} cm, {chord2:5.2f} cm, {chord3:5.2f} cm です.")
     print("この入力値で正しいですか? (y/n)")
     while True:

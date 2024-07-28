@@ -17,10 +17,19 @@ sudo apt upgrade
 
 ### 必要なパッケージのインストール
 ```bash
-sudo apt install gnuplot gnuplot-x11
-sudo apt install inkscape
-sudo apt install texlive*
+sudo apt install wget
 sudo apt install git
+sudo apt install pandoc
+sudo apt install fonts-ipafont
+```
+
+### Miniconda のインストール
+<https://github.com/conda-forge/miniforge.git>
+
+### Python パッケージのインストール
+```bash
+conda install numpy
+conda install matplotlib
 ```
 
 ## 本スクリプトのインストール
@@ -38,9 +47,7 @@ git clone https://github.com/anko3510/crater_expt.git
 wsl -d debian
 ```
 ```bash
-cd ./crater_expt/src
+cd ./crater_expt/latest
 chmod +x ./main.sh
 ./main.sh
 ```
-
-[def]: url

@@ -22,7 +22,6 @@ cp "$NEWEST_JPG" ./pandoc/figures/crater.jpg
 cd ./pandoc
 echo "html 作成中…"
 pandoc -s index.md -o index.html -d default.yaml --metadata-file=metadata.yaml
-mv index.html ../index.html
 cd "$HD"
 echo "結果の html"
-echo "$HD""/index.html"
+echo "$HD""pandoc/index.html"

@@ -76,7 +76,7 @@ while True:
     print(f"弦の長さは {chord1:5.2f} cm, {chord2:5.2f} cm, {chord3:5.2f} cm です.")
     print("この入力値で正しいですか? (y/n)")
     while True:
-        check = input().strip().lower()
+        check = input(">>>").strip().lower()
         if check in ("y", "n"):
             break
         print("不正な入力です. yまたはnで答えてください.")

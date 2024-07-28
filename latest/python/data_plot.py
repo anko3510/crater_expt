@@ -9,6 +9,7 @@ m = 13.8e-3     # 鉄球の質量 [kg]
 # データのインポート
 Data = np.loadtxt("data.dat", delimiter=",")  # データを読み込み
 Height = Data[:,0]      # 高さ [cm]（最初の列）
+R = Data[:,4] / 2       # 半径 [cm]
 R4 = Data[:,5] / 16     # 半径の4乗 [cm^4]（6列目のデータを16で割る）
 
 # プロットの設定
@@ -17,7 +18,8 @@ plt.rcParams["font.family"] = "IPAexGothic"  # 日本語フォントの設定
 plt.rcParams["mathtext.fontset"] = "cm"      # 数式フォントの設定
 
 ## 図と軸の設定
-fig, ax1 = plt.subplots()
+fig, ax1 = plt.subplots(layout="constrained")
+ax1.set_title(f"あなたの記録：高さ {Height[-1]:.3g} cm，半径 {R[-1]:.3g} cm")
 ax1.set_xscale("log")  # X軸を対数スケールに設定
 ax1.set_yscale("log")  # Y軸を対数スケールに設定
 ax1.set_xlim(10, 200)  # X軸の範囲を設定
@@ -28,7 +30,7 @@ ax1.grid(True, which="both", linestyle=":")  # グリッドを表示
 
 # 第2軸の追加
 ax2 = ax1.secondary_xaxis("top")  # 上部に第2のX軸を追加
-ax2.set_xlabel(r"ぶつかったときのエネルギー $E$ [$\mathrm{J}$] (小←→大)")
+ax2.set_xlabel(r"衝突エネルギー $E$ [$\mathrm{J}$]")
 xticks = ax2.get_xticks()
 ax2.set_xticks(xticks, [f"{x:.3g}" for x in (m * g * xticks / 100)])
 
@@ -52,4 +54,4 @@ ax1.plot(meyasu_x, meyasu_y3, c = "C5", linestyle=":", label=r"$r^4 = 0.01 h$")
 ax1.legend(loc="upper left")
 
 # グラフの保存
-plt.savefig("graph.pdf")
+plt.savefig("graph.svg")

@@ -31,7 +31,10 @@
 !/explanation/figure/explanation_figure.pptx
 
 /latest/*
-!/latest/data_input.py
-!/latest/data_plot.py
+!/latest/python/data_input.py
+!/latest/python/data_plot.py
 !/latest/main.sh
 !/latest/graph_white.pdf
+!/latest/pandoc/default.yaml
+!/latest/pandoc/index.md
+!/latest/pandoc/metadata.yaml

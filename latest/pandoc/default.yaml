@@ -1,0 +1,6 @@
+from: markdown
+to: html
+standalone: true
+html-math-method:
+  method: mathjax
+highlight-style: breezedark

@@ -20,7 +20,7 @@ sudo apt upgrade
 sudo apt install wget
 sudo apt install git
 sudo apt install pandoc
-sudo apt install fonts-ipafont
+sudo apt install fonts-ipaexfont
 ```
 
 ### Miniconda のインストール

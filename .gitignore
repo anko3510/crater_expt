@@ -50,3 +50,12 @@
 
 /latest/pandoc/figures/*
 !/latest/pandoc/figures/foo.txt
+
+/explanation/*
+!/explanation/explanation.tex
+!/explanation/preamble.tex
+!/explanation/figure/
+
+/explanation/figure/*
+!/explanation/figure/explanation_figure.pdf
+!/explanation/figure/explanation_figure.pptx

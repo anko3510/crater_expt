@@ -53,6 +53,18 @@ chmod +x ./main.sh
 ./main.sh
 ```
 
+## グラフの日本語が文字化けする場合
+デスクトップで右クリック> ターミナルで開く を選び, 以下のコマンドを入力.
+```PowerShell
+wsl -d Debian
+```
+```bash
+conda activate
+cd ./crater_expt/latest
+chmod +x ./main_en.sh
+./main_en.sh
+```
+
 ## スクリプトの更新
 デスクトップで右クリック> ターミナルで開く を選び, 以下のコマンドを入力.
 ```PowerShell

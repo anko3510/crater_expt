@@ -53,6 +53,7 @@
 
 /explanation/*
 !/explanation/explanation.tex
+!/explanation/explanation.pdf
 !/explanation/preamble.tex
 !/explanation/figure/
 

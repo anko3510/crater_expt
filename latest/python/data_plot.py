@@ -19,11 +19,11 @@ plt.rcParams["mathtext.fontset"] = "cm"      # 数式フォントの設定
 
 ## 図と軸の設定
 fig, ax1 = plt.subplots(layout="constrained")
-ax1.set_title(f"あなたの記録：高さ {Height[-1]:.3g} cm，半径 {R[-1]:.3g} cm")
+ax1.set_title(f"あなたの記録：高さ {Height[-1]:.3g} cm，半径 {R[-1]:.3g} cm，衝突エネルギー {(m * g * Height[-1] / 100):.3g} J")
 ax1.set_xscale("log")  # X軸を対数スケールに設定
 ax1.set_yscale("log")  # Y軸を対数スケールに設定
 ax1.set_xlim(10, 200)  # X軸の範囲を設定
-ax1.set_ylim(1**4, 4**4)  # Y軸の範囲を設定
+ax1.set_ylim(0.5**4, 4**4)  # Y軸の範囲を設定
 ax1.set_xlabel(r"高さ $h$ [$\mathrm{cm}$]")  # X軸ラベルを設定
 ax1.set_ylabel(r"半径の4乗 $r^4$ [$\mathrm{cm^4}$]")  # Y軸ラベルを設定
 ax1.grid(True, which="both", linestyle=":")  # グリッドを表示
@@ -35,8 +35,8 @@ xticks = ax2.get_xticks()
 ax2.set_xticks(xticks, [f"{x:.3g}" for x in (m * g * xticks / 100)])
 
 # データのプロット
-ax1.scatter(Height[-1],   R4[-1],   c = "C0", label="あなたの記録")  # 最後のデータ点（あなたの記録）
 ax1.scatter(Height[0:-1], R4[0:-1], c = "C1", label="他の人の記録")  # その他のデータ点
+ax1.scatter(Height[-1],   R4[-1],   c = "C0", label="あなたの記録")  # 最後のデータ点（あなたの記録）
 
 # 目安の線のプロット
 meyasu_x = np.linspace(5, 200, 100)

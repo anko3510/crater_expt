@@ -20,7 +20,7 @@ mv graph.svg ./../pandoc/figures/graph.svg
 cd "$HD"
 
 # 撮影したクレーターの画像を ./tex/figures/crater.jpg にコピー
-NEWEST_JPG=$(ls -t "$HOME""Pictures/Camera Roll/"*.jpg | head -n1)
+NEWEST_JPG=$(ls -t "$W_HOME""Pictures/Camera Roll/"*.jpg | head -n1)
 cp "$NEWEST_JPG" ./pandoc/figures/crater.jpg
 
 # pandoc + firefox で印刷する PDF を作成

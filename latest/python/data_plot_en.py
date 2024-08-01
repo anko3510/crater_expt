@@ -23,7 +23,7 @@ ax1.set_title(f"Your data : Height {Height[-1]:.3g} cm, Radius {R[-1]:.3g} cm, E
 ax1.set_xscale("log")  # X軸を対数スケールに設定
 ax1.set_yscale("log")  # Y軸を対数スケールに設定
 ax1.set_xlim(10, 200)  # X軸の範囲を設定
-ax1.set_ylim(1**4, 4**4)  # Y軸の範囲を設定
+ax1.set_ylim(0.5**4, 4**4)  # Y軸の範囲を設定
 ax1.set_xlabel(r"Height $h$ [cm]")  # X軸ラベルを設定
 ax1.set_ylabel(r"(Radius)⁴ $r^4$ [cm⁴]")  # Y軸ラベルを設定
 ax1.grid(True, which="both", linestyle=":")  # グリッドを表示
@@ -35,8 +35,8 @@ xticks = ax2.get_xticks()
 ax2.set_xticks(xticks, [f"{x:.3g}" for x in (m * g * xticks / 100)])
 
 # データのプロット
-ax1.scatter(Height[-1],   R4[-1],   c = "C0", label="Your data")  # 最後のデータ点（あなたの記録）
 ax1.scatter(Height[0:-1], R4[0:-1], c = "C1", label="Other data")  # その他のデータ点
+ax1.scatter(Height[-1],   R4[-1],   c = "C0", label="Your data")  # 最後のデータ点（あなたの記録）
 
 # 目安の線のプロット
 meyasu_x = np.linspace(5, 200, 100)

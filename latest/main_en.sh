@@ -1,7 +1,12 @@
 #!/bin/bash
 
-# ホームディレクトリを取得
-HOME=$(pwd | sed -r 's#(([^/]*/){5}).*#\1#')
+# Windows のホームディレクトリを取得
+# W_HOME=$(pwd | sed -r 's#(([^/]*/){5}).*#\1#')
+if pwd | grep -q "OneDrive"; then
+    W_HOME=$(pwd | sed -r 's#(([^/]*/){6}).*#\1#')
+else
+    W_HOME=$(pwd | sed -r 's#(([^/]*/){5}).*#\1#')
+fi
 
 # main.shのディレクトリを取得
 HD=$(pwd)

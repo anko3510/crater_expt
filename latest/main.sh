@@ -1,7 +1,12 @@
 #!/bin/bash
 
-# ホームディレクトリを取得
-HOME=$(pwd | sed -r 's#(([^/]*/){5}).*#\1#')
+# Windows のホームディレクトリを取得
+# W_HOME=$(pwd | sed -r 's#(([^/]*/){5}).*#\1#')
+if pwd | grep -q "OneDrive"; then
+    W_HOME=$(pwd | sed -r 's#(([^/]*/){6}).*#\1#')
+else
+    W_HOME=$(pwd | sed -r 's#(([^/]*/){5}).*#\1#')
+fi
 
 # main.shのディレクトリを取得
 HD=$(pwd)
@@ -15,7 +20,7 @@ mv graph.svg ./../pandoc/figures/graph.svg
 cd "$HD"
 
 # 撮影したクレーターの画像を ./tex/figures/crater.jpg にコピー
-NEWEST_JPG=$(ls -t "$HOME""Pictures/Camera Roll/"*.jpg | head -n1)
+NEWEST_JPG=$(ls -t "$W_HOME""Pictures/Camera Roll/"*.jpg | head -n1)
 cp "$NEWEST_JPG" ./pandoc/figures/crater.jpg
 
 # pandoc + firefox で印刷する PDF を作成

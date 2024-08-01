@@ -25,7 +25,7 @@ ax1.set_yscale("log")  # Y軸を対数スケールに設定
 ax1.set_xlim(10, 200)  # X軸の範囲を設定
 ax1.set_ylim(1**4, 4**4)  # Y軸の範囲を設定
 ax1.set_xlabel(r"Height $h$ [cm]")  # X軸ラベルを設定
-ax1.set_ylabel(r"Radius⁴ $r^4$ [cm⁴]")  # Y軸ラベルを設定
+ax1.set_ylabel(r"(Radius)⁴ $r^4$ [cm⁴]")  # Y軸ラベルを設定
 ax1.grid(True, which="both", linestyle=":")  # グリッドを表示
 
 # 第2軸の追加

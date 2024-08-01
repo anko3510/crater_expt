@@ -35,7 +35,7 @@ conda install matplotlib
 ## 本スクリプトのインストール
 デスクトップで右クリック> ターミナルで開く を選び, 以下のコマンドを入力.
 ```PowerShell
-wsl -d debian
+wsl -d Debian
 ```
 ```bash
 git clone https://github.com/anko3510/crater_expt.git
@@ -44,11 +44,21 @@ git clone https://github.com/anko3510/crater_expt.git
 ## 本スクリプトの実行
 デスクトップで右クリック> ターミナルで開く を選び, 以下のコマンドを入力.
 ```PowerShell
-wsl -d debian
+wsl -d Debian
 ```
 ```bash
 conda activate
 cd ./crater_expt/latest
 chmod +x ./main.sh
 ./main.sh
+```
+
+## スクリプトの更新
+デスクトップで右クリック> ターミナルで開く を選び, 以下のコマンドを入力.
+```PowerShell
+wsl -d Debian
+```
+```bash
+cd crater_expt/
+git pull
 ```
